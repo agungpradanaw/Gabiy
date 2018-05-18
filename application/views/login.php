@@ -55,9 +55,15 @@
                                             <div class="card-block">
                                                 <h2 class="white">Login</h2>
                                                 <form action="<?php echo base_url('login/masuk'); ?>" method="post">
+                                                    <?php if ($this->session->flashdata('info')): ?>
+                                                        <div class="alert alert-danger text-center">
+                                                            Username dan Password salah!
+                                                        </div>
+                                                        <?php endif ?>
                                                     <div class="form-group">
                                                         <div class="col-md-12">
                                                             <input type="text" class="form-control" name="username" id="username" placeholder="Username" required >
+
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -65,20 +71,19 @@
                                                             <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                                                         </div>
                                                     </div>
-                                                    <br>
                                                     <div class="form-group">
                                                         <div class="col-md-12">
                                                             <button type="submit" class="btn btn-pink btn-block btn-raised">Login</button>
                                                             <button type="reset" class="btn btn-secondary btn-block btn-raised">Cancel</button>
                                                         </div>
                                                     </div>
-                                                        <?php if ($this->session->flashdata('info')): ?>
+                                                        <!-- <?php if ($this->session->flashdata('info')): ?>
                                                         <div class="alert alert-danger alert-dismissible">
                                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                                             <h4><i class="icon fa fa-check"></i>Info</h4>
                                                             Maaf Username dan Password salah!
                                                         </div>
-                                                        <?php endif ?>
+                                                        <?php endif ?> -->
                                                 </form>
                                             </div> 
                                         </div>

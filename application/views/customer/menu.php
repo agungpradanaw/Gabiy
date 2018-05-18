@@ -66,14 +66,6 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<form role="search" class="navbar-form navbar-right mt-1">
-						<div class="position-relative has-icon-right">
-							<input type="text" placeholder="Search" class="form-control round" />
-							<div class="form-control-position">
-								<i class="ft-search"></i>
-							</div>
-						</div>
-					</form>
 				</div>
 				<div class="navbar-container">
 					<div id="navbarSupportedContent" class="navbar-collapse">

@@ -10,23 +10,6 @@
 							<div class="px-3 py-3">
 								<div class="media">
 									<div class="media-body text-left">
-										<h3 class="mb-1 danger" id="txt">uptime</h3>
-										<span>Uptime Status</span>
-									</div>
-									<div class="media-right align-self-center">
-										<i class="icon-bulb danger font-large-2 float-right"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-xl-3 col-lg-6 col-12">
-					<div class="card">
-						<div class="card-body">
-							<div class="px-3 py-3">
-								<div class="media">
-									<div class="media-body text-left">
 										<h3 class="mb-1 info">10</h3>
 										<span>Total Device</span>
 									</div>
@@ -44,11 +27,11 @@
 							<div class="px-3 py-3">
 								<div class="media">
 									<div class="media-body text-left">
-										<h3 class="mb-1 success" id="txt">20</h3>
-										<span>Total Customer</span>
+										<h3 class="mb-1 lime">23</h3>
+										<span>Active Device</span>
 									</div>
 									<div class="media-right align-self-center">
-										<i class="icon-user success font-large-2 float-right"></i>
+										<i class="icon-energy lime font-large-2 float-right"></i>
 									</div>
 								</div>
 							</div>
@@ -56,16 +39,31 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-xl-3 col-lg-6 col-12">
-					<div class="card">
+					<div class="card bg-danger">
 						<div class="card-body">
 							<div class="px-3 py-3">
 								<div class="media">
-									<div class="media-body text-left">
-										<h3 class="mb-1 lime" id="txt">23</h3>
-										<span>Active Device</span>
+									<div class="media-left align-self-center">
+										<i class="ft-pause-circle white font-large-2 float-left"></i>
 									</div>
-									<div class="media-right align-self-center">
-										<i class="icon-energy lime font-large-2 float-right"></i>
+									<div class="media-body white text-right">
+										<h5>Matikan Semua Device</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xl-3 col-lg-6 col-12">
+					<div class="card bg-success">
+						<div class="card-body">
+							<div class="px-3 py-3">
+								<div class="media">
+									<div class="media-left align-self-center">
+										<i class="ft-radio white font-large-2 float-left"></i>
+									</div>
+									<div class="media-body white text-right">
+										<h5>Nyalakan Semua Device</h5>
 									</div>
 								</div>
 							</div>
@@ -94,54 +92,112 @@
 				</div>
 				<div class="col-xl-6 col-lg-6 col-sm-6">
 					<div class="row">
-						<div class="col-xl-6 col-lg-6 col-sm-6"> 
-							<div class="card bg-danger">
-								<div class="card-body">
-									<div class="px-3 py-3">
-										<div class="media">
-											<div class="media-left align-self-center">
-												<i class="ft-pause-circle white font-large-2 float-left"></i>
-											</div>
-											<div class="media-body white text-right">
-												<h5>Matikan Semua Device</h5>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 col-sm-6">
-							<div class="card bg-success">
-								<div class="card-body">
-									<div class="px-3 py-3">
-										<div class="media">
-											<div class="media-left align-self-center">
-												<i class="ft-radio white font-large-2 float-left"></i>
-											</div>
-											<div class="media-body white text-right">
-												<h5>Nyalakan Semua Device</h5>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-sm-12">
-							<div class="card">
+							<div class="card" style="padding: 7px;">
 								<div class="card-body">
-									<div class="px-3 py-3">
-										<div class="media">
-											<div class="media-left align-self-center">
-												<i class="ft-shopping-cart font-large-2 float-left"></i>
-											</div>
-											<div class="media-body text-right">
-												<h3>Jumlah Tagihan</h3>
-												<h3><sup>Rp.</sup>2.000.000</h3>
-											</div>
-										</div>
+									<div class="card-block">
+										<h4 class="card-title">List Device Yang Paling Banyak Digunakan</h4>
 									</div>
+									<table class="table table-responsive-md text-center">
+										<thead>
+											<tr>
+												<th>ID Device</th>
+												<th>Device Alias</th>
+												<th>Jml. Pemakaian</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="badge badge-info">CD001</span></td>
+												<td>Lampu Atas 1</td>
+												<td><span class="badge badge-danger">46</span></td>
+												<td>
+													<label class="switch">
+					                                  <!-- <input
+					                                  type="checkbox"
+					                                  id="<?php echo $u['id'] ?>"
+					                                  onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
+					                                    <?php 
+					                                      if($u['state']=="true"){
+					                                        echo 'checked';
+					                                      }
+					                                      else
+					                                  
+					                                    ?>
+					                                  > -->
+					                                  <span class="slider round"></span>
+					                                </label>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="badge badge-info">CD003</span></td>
+												<td>Lampu Atas 2</td>
+												<td><span class="badge badge-danger">41</span></td>
+												<td>
+													<label class="switch">
+					                                  <!-- <input
+					                                  type="checkbox"
+					                                  id="<?php echo $u['id'] ?>"
+					                                  onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
+					                                    <?php 
+					                                      if($u['state']=="true"){
+					                                        echo 'checked';
+					                                      }
+					                                      else
+					                                  
+					                                    ?>
+					                                  > -->
+					                                  <span class="slider round"></span>
+					                                </label>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="badge badge-info">CD002</span></td>
+												<td>Ruang Rapat</td>
+												<td><span class="badge badge-danger">20</span></td>
+												<td>
+													<label class="switch">
+					                                  <!-- <input
+					                                  type="checkbox"
+					                                  id="<?php echo $u['id'] ?>"
+					                                  onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
+					                                    <?php 
+					                                      if($u['state']=="true"){
+					                                        echo 'checked';
+					                                      }
+					                                      else
+					                                  
+					                                    ?>
+					                                  > -->
+					                                  <span class="slider round"></span>
+					                                </label>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="badge badge-info">CD004</span></td>
+												<td>Depan TL</td>
+												<td><span class="badge badge-danger">17</span></td>
+												<td>
+													<label class="switch">
+					                                  <!-- <input
+					                                  type="checkbox"
+					                                  id="<?php echo $u['id'] ?>"
+					                                  onchange='oncheckchange(this,<?php echo $u['pin'];?>,"<?php echo $u['id'];?>","<?php echo $u['customer_id'];?>")'
+					                                    <?php 
+					                                      if($u['state']=="true"){
+					                                        echo 'checked';
+					                                      }
+					                                      else
+					                                  
+					                                    ?>
+					                                  > -->
+					                                  <span class="slider round"></span>
+					                                </label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>

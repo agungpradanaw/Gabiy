@@ -33,7 +33,7 @@ class Customer extends CI_Controller {
         $data['customer_device']   = $this->customer_model->tampil_data_customer_device();
 
         $this->load->view('customer/menu',$data);
-        $this->load->view('customer/ruangdepan/content',$data);
+        $this->load->view('customer/devicelist/content',$data);
         $this->load->view('js');
     }
 

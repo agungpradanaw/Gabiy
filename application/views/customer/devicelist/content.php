@@ -77,8 +77,15 @@
                                 </h3>
                                 <h4><?php echo $device_alias;?></h4>
                                 <p><i><?php echo $description;?></i></p>
+<!-- <div class="container">
+<h1><p id="output"><b>0:00:00:00</b></p></h1>
+<div id="controls" align="center">
+    <button onclick="startPause()">Mulai</button>
+    <button onclick="reset()" id="reset"><b id="reset"> Ulang</b></button>
+</div>
+</div> -->
                                 <p>Total Pemakaian</p>
-                                <h3 class="badge badge-danger"><?= $pemakaian; ?></h3>
+                                <h3 class="badge badge-danger" id="output">0:00:00</h3>
                               </div>
                               <div class="media-right">
                                 <label class="switch">
